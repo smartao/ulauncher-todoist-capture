@@ -2,7 +2,7 @@ import requests
 import time
 
 class TodoistApi:
-    url = "https://api.todoist.com/rest/v2/tasks"
+    url = "https://api.todoist.com/api/v1/tasks"
     token = None
 
     def set_token(self, token):
@@ -21,4 +21,4 @@ class TodoistApi:
             }
         )
 
-        return None if response.status_code == 200 else "Error communicating with Todoist. Repsonse code is %s. " % response.status_code
+        return None if response.status_code == 200 else "Error communicating with Todoist. Response code is %s. " % response.status_code
